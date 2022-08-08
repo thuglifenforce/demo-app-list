@@ -1,0 +1,107 @@
+/* tableau
+-------------------------------------------------- */
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 58px;
+  margin: 20px 0;
+  text-align: center;
+}
+h1 small {
+  font-size: 0.5em;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.responsive-table .table-header {
+  background-color: #353b48;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+.responsive-table .table-row {
+  background-color: #353b48;
+  color: white;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+  flex-basis: 5%;
+}
+.responsive-table .col-2 {
+  flex-basis: 11%;
+}
+.responsive-table .col-3 {
+  flex-basis: 13%;
+}
+.responsive-table .col-4 {
+  flex-basis: 11%;
+}
+.responsive-table .col-5 {
+  flex-basis: 15%;
+}
+.responsive-table .col-6 {
+  flex-basis: 10%;
+}
+.responsive-table .col-7 {
+  flex-basis: 11%;
+}
+.responsive-table .col-8 {
+  flex-basis: 13%;
+}
+@media all and (max-width: 767px) {
+  .responsive-table .col-1, .responsive-table .col-2, .responsive-table .col-3, .responsive-table .col-4, .responsive-table .col-5, .responsive-table .col-6, .responsive-table .col-7, .responsive-table .col-8 {
+    max-width: 100%;
+  }
+  .responsive-table .table-header {
+    display: none;
+  }
+  .responsive-table li {
+    display: block;
+  }
+  .responsive-table .col {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .responsive-table .col:before {
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+  }
+}
+
+/* media menu
+-------------------------------------------------- */
+@media (min-width: 769px) {
+  .header,
+.main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .header {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

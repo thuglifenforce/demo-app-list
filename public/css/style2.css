@@ -1,0 +1,137 @@
+.custom-control.ios-switch {
+  --color: #4cd964;
+  padding-left: 0;
+}
+.custom-control.ios-switch .ios-switch-control-input {
+  display: none;
+}
+.custom-control.ios-switch .ios-switch-control-input:active ~ .ios-switch-control-indicator::after {
+  width: 20px;
+}
+.custom-control.ios-switch .ios-switch-control-input:checked ~ .ios-switch-control-indicator {
+  border: 10px solid var(--color);
+}
+.custom-control.ios-switch .ios-switch-control-input:checked ~ .ios-switch-control-indicator::after {
+  top: -8px;
+  left: 4px;
+}
+.custom-control.ios-switch .ios-switch-control-input:checked:active ~ .ios-switch-control-indicator::after {
+  left: 0px;
+}
+.custom-control.ios-switch .ios-switch-control-input:disabled ~ .ios-switch-control-indicator {
+  opacity: 0.4;
+}
+.custom-control.ios-switch .ios-switch-control-indicator {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  top: 4px;
+  width: 32px;
+  height: 20px;
+  background: #fff;
+  border-radius: 16px;
+  transition: 0.3s;
+  border: 2px solid #ddd;
+}
+.custom-control.ios-switch .ios-switch-control-indicator::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  transition: 0.3s;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  box-shadow: 0 0 2px #aaa, 0 2px 5px #999;
+}
+
+/* Custom Checkbox */
+/* inport
+-------------------------------------------------- */
+:root {
+  color: #9c9c9c;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: #353b48;
+}
+
+.container-import {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #353b48;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #353b48;
+  color: #fff;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #2c313c;
+}
+.btn--primary:active {
+  background: #353b48;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.btn--inside {
+  margin-left: -96px;
+}
+
+.form__field {
+  width: 500px;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+@media (max-width: 557px) {
+  .container-import {
+    width: 100%;
+  }
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
