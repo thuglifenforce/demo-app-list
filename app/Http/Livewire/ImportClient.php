@@ -21,7 +21,7 @@ class ImportClient extends Component
 
         Excel::import(new CsvImport,$request->file('importFile'));
 
-        return back()->with('success', 'All good!');
+        return back()->with('success', 'votre fichier a été importé avec succès');
     }
 
     public function render()

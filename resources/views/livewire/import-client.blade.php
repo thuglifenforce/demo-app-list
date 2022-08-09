@@ -13,7 +13,7 @@
         <form class="form" method="POST"  enctype="multipart/form-data">
             @csrf
             <input name="importFile" type="file" class="form__field"/>
-            <button type="submit" class="btn btn--primary btn--inside uppercase">Importers</button>
+            <button type="submit" class="btn btn--primary btn--inside uppercase">Importer</button>
         </form>
     </div>
 </div>
