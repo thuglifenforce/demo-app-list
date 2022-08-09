@@ -12,8 +12,8 @@
         @endif
         <form class="form" method="POST"  enctype="multipart/form-data">
             @csrf
-            <input type="file" class="form__field" placeholder="" />
-            <button type="submit" class="btn btn--primary btn--inside uppercase">Importer</button>
+            <input name="importFile" type="file" class="form__field"/>
+            <button type="submit" class="btn btn--primary btn--inside uppercase">Importers</button>
         </form>
     </div>
 </div>
