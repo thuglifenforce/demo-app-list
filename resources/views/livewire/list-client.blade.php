@@ -9,7 +9,15 @@
                 <span class="search_icon"><i class="fas fa-search"></i></span>
               </div>
             </div>
-          </div>
+        </div>
+        <div class="mb-3 d-flex justify-content-end align-items-center">
+            Nombre
+            <select wire:model="parpage" id="par-page" class="custom-select w-auto">
+                @for ($i = 20; $i < 40; $i +=5) <option value="{{ $i }}">{{ $i }}</option>
+                    @endfor
+            </select>
+            <label for="par-page">par page</label>
+        </div>
 
         <li class="table-header">
             <div class="col col-1">#</div>
@@ -43,11 +51,11 @@
             @endforeach
         </li>
     </ul>
-    <div>
+    <div class="mb-5">
     {{ $imports->links('livewire.pagination') }}
     </div>
 
-    
+
 
 </div>
 

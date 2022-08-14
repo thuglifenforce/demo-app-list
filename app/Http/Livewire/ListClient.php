@@ -17,10 +17,6 @@ class ListClient extends Component
     public string $orderField = 'ressource';
     public string $orderDirection = 'ASC';
 
-    // public int $count = 0;
-
-
-
 
     protected $queryString = [
         'search' => ['except' => ""],
@@ -34,12 +30,6 @@ class ListClient extends Component
     ];
 
 
-    public function count()
-    {
-       $count = Import::where('nombre_de_personnes')->count();
-    //    dd($count);
-
-    }
 
 
     public function setOrderField(string $nom)
@@ -67,6 +57,12 @@ class ListClient extends Component
     public function onUserUpdated()
     {
         $this->resetPage();
+    }
+
+
+    public function delete()
+    {
+        
     }
 
     public function render()
