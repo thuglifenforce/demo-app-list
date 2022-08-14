@@ -13,7 +13,7 @@ class ListClient extends Component
 
 
     public $search ;
-    public int $parpage = 20;
+    public int $parpage = 10;
     public string $orderField = 'ressource';
     public string $orderDirection = 'ASC';
 
@@ -62,7 +62,7 @@ class ListClient extends Component
 
     public function delete()
     {
-        
+
     }
 
     public function render()

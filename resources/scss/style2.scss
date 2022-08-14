@@ -1,7 +1,6 @@
 
 .custom-control {
 
-
   &.ios-switch{
     --color: #4cd964;
     padding-left: 0;
@@ -190,7 +189,6 @@ a {
 	&--primary {
 		background: $button-bg-color;
 		color: $button-text-color;
-		// box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -203,7 +201,6 @@ a {
 
 		&:active {
 			background: $button-bg-color;
-			// box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
             box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
             -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
             -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
