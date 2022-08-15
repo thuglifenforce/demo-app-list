@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Models\Import;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -28,8 +30,6 @@ class ListClient extends Component
     protected $listeners = [
         'userUpdated' => 'onUserUpdated'
     ];
-
-
 
 
     public function setOrderField(string $nom)
@@ -60,8 +60,12 @@ class ListClient extends Component
     }
 
 
-    public function delete()
+    public function destroy()
     {
+
+        $listes = DB::table('imports');
+        $listes->truncate();
+        return back()->with('success', 'La liste a été supprimer avec succès');
 
     }
 

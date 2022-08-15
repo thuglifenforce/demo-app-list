@@ -10,14 +10,34 @@
               </div>
             </div>
         </div>
-        <div class="mb-3 d-flex justify-content-end align-items-center">
-            Nombre
-            <select wire:model="parpage" id="par-page" class="custom-select w-auto">
-                @for ($i = 10; $i < 40; $i +=10) <option value="{{ $i }}">{{ $i }}</option>
-                    @endfor
-            </select>
-            par page
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                @if ($errors)
+                @foreach ($errors->all() as $error )
+                <div class="alert alert-danger" role="alert">{{ $error }}</div>
+                @endforeach
+                @endif
+
+                @if (Session::has('success'))
+                    <div class="alert alert-success" role="alert">{{ Session::get('success')}}</div>
+                @endif
+                <form action="{{ route('delete') }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button onclick="return confirm('voulez vous supprimer la liste')" type="submit" class="btn btn--primary uppercase">Supprimer</button>
+                </form>
+            </div>
+
+            <div>
+                Nombre
+                <select wire:model="parpage" id="par-page" class="custom-select w-auto">
+                    @for ($i = 10; $i < 40; $i +=10) <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                </select>
+                par page
+            </div>
         </div>
+
 
         <li class="table-header">
             <div class="col col-1">#</div>

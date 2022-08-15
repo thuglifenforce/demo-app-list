@@ -3,6 +3,7 @@
 use App\Http\Controllers\ImportController;
 use App\Http\Livewire\ImportClient;
 use App\Http\Livewire\ListClient;
+use App\Models\Import;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,14 @@ Route::get('list', function () {
 Route::post('list', [ImportClient::class, 'import'], function () {
     return view('pages.list' );
 });
+
+
+Route::delete('list', [ListClient::class, 'destroy'], function () {
+    return view('pages.list');
+})->name('delete');
+
+
+
 
 
 // Route::post('/', [ListClient::class, 'update'], function () {
