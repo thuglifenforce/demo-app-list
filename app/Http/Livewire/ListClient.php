@@ -79,7 +79,8 @@ class ListClient extends Component
                                 ->orderBy($this->orderField, $this->orderDirection)
                                 ->paginate($this->parpage),
 
-            'count' => Import::all()->sum('nombre_de_personnes')
+            'count' => Import::all()->sum('nombre_de_personnes'),
+            'nombre' => Import::where('confirmer', '=', 1)->sum('nombre_de_personnes')
 
         ]);
 

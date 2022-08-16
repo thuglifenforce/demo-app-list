@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Import;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Model;
@@ -14,6 +15,7 @@ class ToggleButton extends Component
     public Model $model;
     public string $field;
     public bool $isActive;
+    public array $nombre = [];
 
 
     public function mount()
@@ -29,6 +31,7 @@ class ToggleButton extends Component
         $this->emit('userUpdated');
 
     }
+
 
 
     public function render()

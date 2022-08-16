@@ -1,6 +1,7 @@
 <div class="container">
+    
 
-    <h1>Total d'usage attendu :{{ $count }}</h1>
+    <h1>Total d'usage attendu :{{ $count }} {{ $nombre}}</h1>
     <ul class="responsive-table">
         <div class="container h-100">
             <div class="d-flex justify-content-center h-100 mb-3">
@@ -60,6 +61,7 @@
             <div class="col col-5" data-label="Heure">{{ $import->heure_de_debut }}</div>
             <div class="col col-6" data-label="Nombre">{{ $import->nombre_de_personnes }}</div>
             <div class="col col-7" data-label="Code">{{ $import->code_de_reservation }}</div>
+
             <div class="col col-8" data-label="Confirmation">
                 @livewire('toggle-button',[
                 'model' => $import,
