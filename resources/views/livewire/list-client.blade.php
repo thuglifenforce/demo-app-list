@@ -1,7 +1,23 @@
 <div class="container">
-    
 
-    <h1>Total d'usage attendu :{{ $count }} {{ $nombre}}</h1>
+
+    <div class="compteur mb-2 mt-2">
+        <div class="col-md-3">
+            <div class="card-counter info">
+              <i class="fa fa-users"></i>
+              <span class="count-numbers">{{ $count}}</span>
+              <span class="count-name">Attendues</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-counter success">
+            <i class="fa  fa-user"></i>
+            <span class="count-numbers">{{ $nombre}}</span>
+            <span class="count-name">Arrivées</span>
+          </div>
+        </div>
+    </div>
+
     <ul class="responsive-table">
         <div class="container h-100">
             <div class="d-flex justify-content-center h-100 mb-3">

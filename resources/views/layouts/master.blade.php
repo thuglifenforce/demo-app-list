@@ -15,17 +15,14 @@
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
 
-
-
-
 </head>
 
 <body>
     <header class="header">
-        <h1 class="logo">Liste de reservation</h1>
+        <h1 class="logo">Reservation</h1>
         <ul class="main-nav">
             <li><a href={{ route('liste') }}>Liste</a></li>
-            <li><a href={{ route('import') }}>Import</a></li>
+            <li><a href={{ route('import') }}>Importer</a></li>
         </ul>
     </header>
 
